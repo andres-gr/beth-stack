@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "composite": true,
+    "downlevelIteration": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "jsxFactory": "Html.createElement",
+    "jsxFragmentFactory": "Html.Fragment",
+    "lib": ["ESNext"],
+    "module": "esnext",
+    "moduleDetection": "force",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "paths": {
+      "@/*": ["src/*"],
+      "@/db/*": ["src/db/*"],
+      "@/styles/*": ["src/styles/*"],
+      "@/templates/*": ["src/templates/*"],
+      "@/types/*": ["src/types/*"],
+      "~/css": ["public/vanilla-styles/index.css"],
+      "~/styles": ["public/vanilla-styles/index.cjs"]
+    },
+    "plugins": [
+      {
+        "name": "@kitajs/ts-html-plugin"
+      }
+    ],
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "esnext",
+    "types": [
+      "bun-types" // add Bun global
+    ]
+  },
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./public/vanilla-styles/*.cjs"
+  ]
+}

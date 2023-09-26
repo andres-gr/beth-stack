@@ -1,0 +1,29 @@
+{
+	"env": {
+		"es6": true,
+		"node": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"prettier"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"project": [
+			"./tsconfig.json",
+			"./tsconfig.scripts.json"
+		],
+		"sourceType": "module"
+	},
+	"plugins": [
+		"prettier",
+		"@typescript-eslint"
+	],
+	"reportUnusedDisableDirectives": true,
+	"root": true,
+	"rules": {
+		"prettier/prettier": "error"
+	}
+}
